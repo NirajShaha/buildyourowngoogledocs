@@ -17,6 +17,7 @@ import { useEditorStore } from "@/store/use-editor-store";
 import Underline from "@tiptap/extension-underline";
 import FontFamily from "@tiptap/extension-font-family";
 import TextStyle from "@tiptap/extension-text-style";
+import TextAlign from '@tiptap/extension-text-align'
 
 export const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -75,7 +76,10 @@ export const Editor = () => {
         openOnClick: false,
         autolink: true,
         defaultProtocol: "https",
-      })
+      }),
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+      }),
     ],
     content: `
         <table>
