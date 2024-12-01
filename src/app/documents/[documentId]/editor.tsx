@@ -2,6 +2,7 @@
 
 import { useEditor, EditorContent } from "@tiptap/react";
 import { Color } from "@tiptap/extension-color";
+import Link from "@tiptap/extension-link";
 import Highlight from "@tiptap/extension-highlight";
 import StarterKit from "@tiptap/starter-kit";
 import TaskItem from "@tiptap/extension-task-item";
@@ -70,6 +71,11 @@ export const Editor = () => {
       Highlight.configure({
         multicolor: true,
       }),
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+        defaultProtocol: "https",
+      })
     ],
     content: `
         <table>
