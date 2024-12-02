@@ -19,6 +19,8 @@ import FontFamily from "@tiptap/extension-font-family";
 import TextStyle from "@tiptap/extension-text-style";
 import TextAlign from '@tiptap/extension-text-align'
 import { FontSizeExtension } from "@/extensions/font-size";
+import { LineHeightExtension } from "@/extensions/line-height";
+import { types } from "util";
 
 export const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -57,6 +59,10 @@ export const Editor = () => {
     extensions: [
       StarterKit,
       FontSizeExtension,
+      LineHeightExtension.configure({
+        types:["heading", "paragraph"],
+        defaultLineHeight: "normal"
+      }),
       Color,
       FontFamily,
       TextStyle,
