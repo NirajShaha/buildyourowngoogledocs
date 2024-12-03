@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar } from './navbar'
 import Link from 'next/link';
+import { TemplateGallery } from './template-gallery';
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -8,9 +9,7 @@ const Home: React.FC = () => {
       <Navbar />
       </div>
       <div className='mt-16'>
-        Click <Link href="/documents/123">
-          <span className='text-blue-500 underline'>&nbsp;here&nbsp;</span>
-        </Link> to go to document
+        <TemplateGallery />
       </div>
     </div>
   );
