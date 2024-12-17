@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SearchInput } from "./search-input";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs"
+import { Avatars } from "../documents/[documentId]/avatar";
 
 export const Navbar = () => {
     return(
@@ -14,6 +15,7 @@ export const Navbar = () => {
             </div>
             <SearchInput />
             <div className="flex gap-3 items-center pl-6">
+                <Avatars />
                 <OrganizationSwitcher 
                 afterCreateOrganizationUrl="/"
                 afterLeaveOrganizationUrl="/"
